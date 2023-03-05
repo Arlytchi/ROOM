@@ -1,0 +1,157 @@
+/*On importe les bibliotheques de police*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+/*style du scroll vers les section*/
+html{
+    scroll-behavior: smooth;
+}
+/*style du corps de la page*/
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat',sans-serif;/*police par defaut*/
+}
+/*style de la barre de navigation de la page*/
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid #6f6f6f;
+}
+/*style du titre(logo) IAM CAMP*/
+nav h1{
+    color: #eb7371;
+    font-family: 'Playfair Display',sans-serif;
+    font-size: 30px;
+}
+/*style des onglet de la barre de navigation*/
+nav .onglets{
+    margin-top: 3px;
+    margin-left: 300px;
+}
+/*style des liens hypertext*/
+nav a{
+    text-decoration: none;/*Enlever le surlignement par defaut des liens*/
+    margin-right: 10px;
+    border-bottom: 1px solid black;
+    color: black;
+    padding-bottom: 4px;
+}
+/*style du header */
+header{
+    display: flex;
+    flex-direction: column;/*empile le contenue en colonne*/
+    align-items: center;
+    background: url('image/logement.jpg');
+    background-size: cover;/*Afain que l'image couvre la totalite du header*/
+    padding: 50px;
+}
+/*style du titre de notre header */
+header h1{
+    font-family: 'Playfair Display',sans-serif;
+    margin-top: -20px;
+    font-size: 30px;
+}
+/*style du dous titre*/
+header h4{
+    font-family: 'Playfair Display',sans-serif;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px solid;
+}
+/*style du boutton*/
+header button{
+    padding: 10px 20px;/*marge interieur en haut et en bas de 10px et de gauche a droite de 20px*/
+    background-color: beige;
+    color: black;
+    border: none;
+    font-family: 'Playfair Display',sans-serif;
+    cursor: pointer;/*lorsqu'on est sur le boutton le curseur devient un pointeur*/
+
+}
+/*style de la section*/
+.main{
+    margin-top:40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main .contents .location{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+#j{
+    color: black;
+}
+#b{
+    color: #eb7371;
+}
+.main .contents .location .left{
+    flex: 0 0 30%;
+    padding: 20px;
+    background-color: rgba(122, 122, 122, 0.753);
+    color: #eb7371;
+}
+.main .contents .location.right{
+    flex: 0 0 70%;
+}
+.main .contents .location .right img{
+    height: 300px;
+    width: 400px;
+    margin-top: 5px;
+}
+footer{
+    margin-top: 40px;
+    border-top: 5px solid #6f6f6f;
+    background-color: rgba(122, 110, 56, 0.295);
+    color: black;
+    padding: 30px 100px;
+}
+footer h1{
+    font-family: 'Playfair Display',sans-serif;
+    border-bottom: 1px solid #ffff;
+    width: 18%;
+    padding-bottom: 5px;
+}footer .services{
+    margin-top: -10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+footer .services .service{
+    margin-right: 30px;
+    padding: 10px;
+
+}
+footer .services .service p{
+    max-width: 300px;
+}
+footer #contact{
+    color: gray;
+}
+/*Gerer le format mobile(Iphone SE, 12 pro)
+les mediaquieries. je vais addapter l'onglet de la barre de navigation a un format mobile.*/
+@media screen and (max-width:600px){
+    nav .onglets{
+        margin-left: 0px;/*annuler la marge de gauche pour eviter la descente des onglets en format mobile*/
+        margin-bottom: 20px;/*on eloigne la bordure de nos liens*/
+    }
+    .main .location{
+        margin: 10px;
+    }
+    .main .contents .location .right img{
+        height: 200px;
+        width: 100%;
+        margin-top: 0px;
+    }
+    .main .contents .location{
+        display: block;
+    }
+    footer{
+        padding: 30px;
+
+    }
+}
